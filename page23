@@ -1,0 +1,11 @@
+def calculateSimilarItem(prefs,n=10):
+    result={}
+    itemPrefs=transformPrefs(prefs)
+    c=0
+    for item in itemPrefs:
+        c+=1
+        if c%100==0:
+            print "%d/%d"%(c,len(itemPrefs))
+            scores=topMatches(itemPrefs,n=n,similarity=sim_distance)
+            result[item]=scores
+    return result
