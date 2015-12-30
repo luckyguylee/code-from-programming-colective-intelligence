@@ -1,0 +1,13 @@
+from math import sqrt
+def sim_distance(perfs,person1,person2):
+    si={}
+    for item in prefs[person1]:
+        if item in prefs:
+            si[len]=1
+
+    if len(si)==0:
+        return 0
+
+    sum_of _squares=summ([pow(prefs[person][item]-prefs[person2][item],2)
+                          for item in prefs[person] if item in prefs[person2]]
+    return 1/(1+sqrt_of_squares))
