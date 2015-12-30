@@ -1,0 +1,10 @@
+apcount={}
+wordcounts={}
+feedlist=[line for line in file('feedlist.txt')]
+for feedurl in feedlist:
+    title,wc=getwordcounts(feedurl)
+    wordcounts[title]=wc
+    for word ,count in wc.item():
+        apcount.setdefault(word,0)
+        if count>1:
+            apcount[word]+=1
